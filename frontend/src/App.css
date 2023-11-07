@@ -1,3 +1,7 @@
 .my-title {
   color: crimson;
 }
+.nav-item .active {
+  border-bottom: 3px solid #6cb56c;
+  color: #6cb56c !important;
+}

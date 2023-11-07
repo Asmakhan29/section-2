@@ -3,21 +3,37 @@ import './App.css';
 import Home from './components/Home';
 import Login from './components/Login';
 import Signup from './components/Signup';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter,Link, Route, Routes } from 'react-router-dom';
 import Contactus from './components/Contactus';
+import Navbar from './components/Navbar';
+import EventHandling from './components/EventHandling';
+import Notfound from './components/Notfound';
 
 const App = () => {
   return (
     <div>
       
       
+      
       <BrowserRouter>
+      <Navbar/>
+      {/* <Link to ="/">Home page</Link>
+      <Link to ="/Login">Login Page</Link>
+      <Link to ="/Signup">Sign up</Link>
+      <Link to ="/Contactus">Contact Us</Link> */}
+      
+
           <Routes>
 
+
+          
           <Route path='/' element={ <Home/> } />
           <Route path='/Login' element={ <Login/> } />
           <Route path='/Signup' element={ <Signup/> } />
           <Route path='/Contactus' element={ <Contactus/> } />
+          <Route path='/EventHandling' element={ <EventHandling/> } />
+          <Route path='*' element={ <Notfound/> } />
+
 
           </Routes>
       </BrowserRouter>
