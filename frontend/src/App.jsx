@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Contactus from './components/Contactus';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           <Route path='/' element={ <Home/> } />
           <Route path='/Login' element={ <Login/> } />
           <Route path='/Signup' element={ <Signup/> } />
+          <Route path='/Contactus' element={ <Contactus/> } />
 
           </Routes>
       </BrowserRouter>
