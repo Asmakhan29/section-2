@@ -51,6 +51,12 @@ const Navbar = () => {
                                     Event Handling
                                 </NavLink>
                             </li>
+
+                            <li className="nav-item">
+                                <NavLink className="nav-link" to='/State'>
+                                    State Mangement
+                                </NavLink>
+                            </li>
                         </ul>
                         <form className="d-flex" role="search">
                             <input

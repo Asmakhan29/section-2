@@ -8,6 +8,7 @@ import Contactus from './components/Contactus';
 import Navbar from './components/Navbar';
 import EventHandling from './components/EventHandling';
 import Notfound from './components/Notfound';
+import StateManagement from './components/StateManagement';
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
           <Route path='/Signup' element={ <Signup/> } />
           <Route path='/Contactus' element={ <Contactus/> } />
           <Route path='/EventHandling' element={ <EventHandling/> } />
+          <Route path='/State' element={ <StateManagement/> } />
           <Route path='*' element={ <Notfound/> } />
 
 
