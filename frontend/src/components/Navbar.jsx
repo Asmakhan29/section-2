@@ -45,6 +45,11 @@ const Navbar = () => {
                                     Login
                                 </NavLink>
                             </li>
+                            <li className="nav-item">
+                                <NavLink className="nav-link" to='/Listpost'>
+                                    List Post
+                                </NavLink>
+                            </li>
 
                             <li className="nav-item">
                                 <NavLink className="nav-link" to='/EventHandling'>

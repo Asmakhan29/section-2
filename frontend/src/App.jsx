@@ -9,6 +9,7 @@ import Navbar from './components/Navbar';
 import EventHandling from './components/EventHandling';
 import Notfound from './components/Notfound';
 import StateManagement from './components/StateManagement';
+import Listpost from './components/Listpost';
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
           <Route path='/Contactus' element={ <Contactus/> } />
           <Route path='/EventHandling' element={ <EventHandling/> } />
           <Route path='/State' element={ <StateManagement/> } />
+          <Route path='/listpost' element={ <Listpost/> } />
           <Route path='*' element={ <Notfound/> } />
 
 
