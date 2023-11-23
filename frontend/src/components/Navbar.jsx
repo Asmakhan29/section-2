@@ -50,6 +50,11 @@ const Navbar = () => {
                                     List Post
                                 </NavLink>
                             </li>
+                            <li className="nav-item">
+                                <NavLink className="nav-link" to='/Todolist'>
+                                    Todo list
+                                </NavLink>
+                            </li>
 
                             <li className="nav-item">
                                 <NavLink className="nav-link" to='/EventHandling'>

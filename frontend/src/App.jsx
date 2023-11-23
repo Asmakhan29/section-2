@@ -10,6 +10,7 @@ import EventHandling from './components/EventHandling';
 import Notfound from './components/Notfound';
 import StateManagement from './components/StateManagement';
 import Listpost from './components/Listpost';
+import Todolist from './components/Todolist';
 
 const App = () => {
   return (
@@ -36,6 +37,7 @@ const App = () => {
           <Route path='/EventHandling' element={ <EventHandling/> } />
           <Route path='/State' element={ <StateManagement/> } />
           <Route path='/listpost' element={ <Listpost/> } />
+          <Route path='/Todolist' element={ <Todolist/> } />
           <Route path='*' element={ <Notfound/> } />
 
 
