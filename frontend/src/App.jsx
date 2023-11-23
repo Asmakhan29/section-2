@@ -11,10 +11,12 @@ import Notfound from './components/Notfound';
 import StateManagement from './components/StateManagement';
 import Listpost from './components/Listpost';
 import Todolist from './components/Todolist';
+import { Toaster } from 'react-hot-toast';
 
 const App = () => {
   return (
     <div>
+      <Toaster position='top-center'/>
       
       
       
