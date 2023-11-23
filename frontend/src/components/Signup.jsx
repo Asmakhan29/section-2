@@ -46,7 +46,7 @@ const Signup = () => {
               <h3 className="my-3 text-center">Brand Logo</h3>
               <h5 className="text-center text-muted">Signup Form</h5>
 
-              <form onSubmit={signupForm.handleSubmit}>
+              <form onSubmit={signupForm.handleSubmit} className='fs-5'>
 
                 <label htmlFor="name">Name</label>
                 <span className='text-danger ms-3'>{signupForm.touched.name && signupForm.errors.name}</span>
