@@ -27,7 +27,7 @@ const Login = () => {
     onSubmit: (values, { resetForm }) => {
       alert(JSON.stringify(values));
       console.log(values);
-      // resetForm();   
+      resetForm();   
       toast.success('Form Submitted');
     },
     validationSchema: LoginSchema
@@ -44,15 +44,15 @@ const Login = () => {
               <div className="card-body">
                 <h2 className='my-4 pb-2'>Login Form</h2>
 
-                <form>
+                <form onSubmit={LoginForm.handleSubmit} className='fs-5'>
 
                   <label htmlFor="email">Enter E-mail</label>
                   <span className='text-danger ms-3'>{LoginForm.touched.email && LoginForm.errors.email}</span>
-                  <input type="text" id = 'email' onChange={LoginForm.handleChange} value={LoginForm.values.email}  className='form-control'/>
+                  <input type="text" id='email' onChange={LoginForm.handleChange} value={LoginForm.values.email}  className='form-control'/>
 
                   <label htmlFor="password">Enter Password</label>
                   <span className='text-danger ms-3'>{LoginForm.touched.password && LoginForm.errors.password}</span>
-                  <input type="password" id = 'password' onChange={LoginForm.handleChange} value={LoginForm.values.password}  className='form-control'/>
+                  <input type="password" id='password' onChange={LoginForm.handleChange} value={LoginForm.values.password}  className='form-control'/>
 
                   <button type='submit' className='btn btn-primary w-100 my-4'>Submit</button>
 
