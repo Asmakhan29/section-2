@@ -13,7 +13,14 @@ const SignupSchema = Yup.object().shape({
     .required('Required'),
   password: Yup.string()
     .min(2, 'Too Short!')
-    .required('Required'),
+    .required('Required')
+    .matches(/[0-9]/, 'Number is required')
+    .matches(/[a-z]/, 'Lowercase is required')
+    .matches(/[A-Z]/, 'uppercase is required')
+    .matches(/[^\w]/, 'special character is required'),
+  confirm:  Yup.string()
+    .oneOf([Yup.ref('password'),null], 'Password must match')
+    .required('required')
 });
 
 const Signup = () => {
@@ -22,7 +29,8 @@ const Signup = () => {
     initialValues: {
       name: '',
       email: '',
-      password: ''
+      password: '',
+      confirm: ''
     },
     onSubmit: (values, { resetForm }) => {
       alert(JSON.stringify(values));
@@ -59,6 +67,10 @@ const Signup = () => {
                 <label htmlFor="password">Password</label>
                 <span className='text-danger ms-3'>{signupForm.touched.password && signupForm.errors.password}</span>
                 <input type="password" id='password' onChange={signupForm.handleChange} value={signupForm.values.password} className='form-control mb-4' />
+
+                <label htmlFor="confirm">Confirm Password</label>
+                <span className='text-danger ms-3'>{signupForm.touched.confirm && signupForm.errors.confirm}</span>
+                <input type="password" id='confirm' onChange={signupForm.handleChange} value={signupForm.values.confirm} className='form-control mb-4' />
 
                 <button type='submit' className='btn btn-primary w-100 my-4'>Submit</button>
 
